@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <!--app:navigationIcon="?attr/homeAsUpIndicator"-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="1dp"
+            android:background="@drawable/radio_group_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/chartRoom"
+                style="@style/MenuTextItemStyle2"
+                android:checked="true"
+                android:text="@string/chat_room"
+                />
+
+            <RadioButton
+                android:id="@+id/nearMsg"
+                style="@style/MenuTextItemStyleMid"
+                android:text="@string/near_msg"
+                />
+            <RadioButton
+                android:id="@+id/foward_do"
+                style="@style/MenuTextItemStyle1"
+                android:text="@string/foword"
+                />
+        </RadioGroup>
+
+
+    </android.support.v7.widget.Toolbar>
+</android.support.design.widget.AppBarLayout>

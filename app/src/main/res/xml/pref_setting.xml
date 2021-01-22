@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="new_msg_notice"
+        android:title="@string/new_msg_notice"/>
+
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="voice_switch"
+        android:title="@string/voice_switch"/>
+
+    <!--<com.smart.chatui.ui.setting.SettingByVoice-->
+        <!--android:dependency="voice_switch"-->
+        <!--android:key="voice_msg"-->
+        <!--/>-->
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="verb_msg"
+        android:title="@string/verb_msg"/>
+
+
+    <!--<PreferenceCategory android:title="@string/about">-->
+    <!--<Preference-->
+    <!--android:key="author"-->
+    <!--android:summary="欢迎使用羿聊"-->
+    <!--android:title="@string/app_name"/>-->
+
+    <!--</PreferenceCategory>-->
+
+</PreferenceScreen>

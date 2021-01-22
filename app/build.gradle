@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'com.neenbedankt.android-apt'
+// 依赖插件脚本
+//apply from: 'tinker-support.gradle'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "com.smart.chatui"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 25
+        versionName "1.0.8"
+        multiDexEnabled true
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    greendao {
+        schemaVersion 1
+        daoPackage 'com.smart.chatui.greendao'
+        targetGenDir 'src/main/java'
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+}
+
+dependencies {
+//    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+//    implementation 'com.android.support:support-vector-drawable:26.1.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.jude:easyrecyclerview:4.2.3'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation project(':netlibrary')
+    implementation 'org.greenrobot:greendao:3.2.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    //    implementation project(':smtlibrary')
+    implementation project(':takephoto_library')
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+//    implementation 'com.tencent.tinker:tinker-android-lib:1.9.6'
+}

@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
+//apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 26
+    publishNonDefault true
+
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    task makeJar(type: Jar) {
+        archiveName = 'udputils-v1.16.jar' //最终jar包的名称
+        from(project.zipTree('build/intermediates/packaged-classes/release/classes.jar')) //需要打的juhepaysdk的编译文件
+        destinationDir = file('build/libs') //jar包输出路径
+    }
+    makeJar.dependsOn(build) //必须写的配置
+
+    lintOptions {
+        abortOnError false
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation 'org.greenrobot:greendao:3.2.0'
+
+    implementation 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.0.0'
+}

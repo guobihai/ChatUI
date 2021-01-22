@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">羿聊</string>
+    <string name="login">用户登录</string>
+
+    <string name="btn_login">登录</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="title_home">新的聊天</string>
+    <string name="title_contact">通讯录</string>
+    <string name="title_dashboard">聊天室和组</string>
+    <string name="title_setting">系统设置</string>
+    <string name="title_exit">退出系统</string>
+    <string name="send_friends_msg">发送朋友圈</string>
+
+    <string name="cliam_answer">会员待回复</string>
+    <string name="cliam_loading">正在申请跟进中...</string>
+    <string name="hash_cliam"> 已有导购正在跟进中。</string>
+
+    <string name="chat_room">聊天室</string>
+    <string name="near_msg">最近消息</string>
+    <string name="foword">待办</string>
+
+    <string name="new_msg_notice">接收新消息通知</string>
+    <string name="voice_switch">声音</string>
+    <string name="voice_msg">新消息提示音</string>
+    <string name="fllow_system_voice">跟随系统</string>
+    <string name="verb_msg">震动</string>
+
+
+    <string name="select_group_contacts">群发选中</string>
+    <string name="select_group_condition">筛选过滤</string>
+    <string name="send_group">羿聊群发</string>
+
+    <string name="select_mode_label">选择模板</string>
+    <string name="comfirm_send_group_msg">确认群发</string>
+
+
+    <string name="add_pto_desc">(图片仅支持通过微信发送，最多同时支持三张图片)</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

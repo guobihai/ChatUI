@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.smart.chatui.ui.activity.FriendsActivity">
+
+    <include layout="@layout/chart_toolbar_layout"/>
+
+    <com.smart.chatui.ui.views.ClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_input_bg"
+        android:drawableLeft="@drawable/search_bar_icon_normal"
+        android:hint="请输入姓名关键字"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:textSize="15dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/cantact_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_content"/>
+
+        <com.smart.chatui.ui.views.WaveSideBar
+            android:id="@+id/sideBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:backgroundColor="#bef9b81b"
+            app:chooseTextColor="@android:color/white"
+            app:circleRadius="24dp"
+            app:hintTextSize="32sp"
+            app:radius1="24dp"
+            app:textColor="#969696"
+            app:textSize="10sp"/>
+    </FrameLayout>
+</LinearLayout>
